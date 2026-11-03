@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youssef Mahmoud Fahmi - 3D Web Developer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Animated Neon Blobs (Cosmic Vibe) -->
+  <div class="blob-bg blob-1"></div>
+  <div class="blob-bg blob-2"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+
+
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span id="displayLogo">CodeCraft</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Tech Stack</a>
+      <a href="#projects">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="contact.html" class="btn btn-purple pulse-btn">Hire Me &nearr;</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="badge glow-badge" id="displayRole">3D WEB & FULL-STACK DEVELOPER</div>
+      
+      <h1 class="hero-headline">
+        Hi, I'm <span id="displayName" class="purple-gradient-text">Youssef Mahmoud Fahmi</span><br>
+        <span id="displayTitle" class="typing-text">Crafting immersive 3D & modern web experiences.</span>
+      </h1>
+
+      <p class="hero-description" id="displayBio">
+        Expert Front-End Developer specializing in building fast, interactive, and 3D-integrated web platforms using HTML, CSS, JS, React, Node, MongoDB, and Firebase.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-purple glow-effect">Explore Work &nearr;</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch &darr;</a>
+      </div>
+
+      <!-- Tech Stack Badge Strip -->
+      <div class="tech-stack">
+        <p class="tech-title">CORE TECHNOLOGIES & DATABASES</p>
+        <div class="tech-icons">
+          <div class="tech-box orange float-anim" style="animation-delay: 0s;">HTML5</div>
+          <div class="tech-box blue float-anim" style="animation-delay: 0.2s;">CSS3</div>
+          <div class="tech-box yellow float-anim" style="animation-delay: 0.4s;">JS</div>
+          <div class="tech-box cyan float-anim" style="animation-delay: 0.6s;">React</div>
+          <div class="tech-box green float-anim" style="animation-delay: 0.8s;">Node</div>
+          <div class="tech-box emerald float-anim" style="animation-delay: 1.0s;">Mongo</div>
+          <div class="tech-box red float-anim" style="animation-delay: 1.2s;">Fire</div>
+          <div class="tech-box purple float-anim" style="animation-delay: 1.4s;">3D Web</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D Interactive Parallax Frame -->
+    <div class="hero-image-container">
+      <div class="tilt-card" id="tiltContainer">
+        <div class="image-frame crystal-glass">
+          <img src="img/IMG-20251122-WA0064.jpg" alt="Youssef Mahmoud" id="profileImg">
+        </div>
+
+        <!-- Dynamic Glass Code Overlay -->
+        <div class="code-snippet-card float-card crystal-glass">
+          <div class="code-header">
+            <div class="dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="code-title">&lt;/&gt; Developer</span>
+          </div>
+          <pre><code><span class="c-purple">const</span> developer = {
+  name: <span class="c-green">"Youssef Mahmoud"</span>,
+  stack: [<span class="c-green">"React"</span>, <span class="c-green">"Node"</span>, <span class="c-green">"3D Web"</span>],
+  databases: [<span class="c-green">"MongoDB"</span>, <span class="c-green">"Firebase"</span>],
+  status: <span class="c-green">"100% Client Satisfaction"</span>
+};</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section reveal-on-scroll" id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <span class="section-badge">ABOUT ME</span>
+        <h2>High-Quality Web Solutions with 100% Satisfaction</h2>
+        <p>I have built numerous professional websites for clients across different industries. Every project is crafted with high attention to performance, modern design, and total client satisfaction.</p>
+        <a href="#contact" class="btn btn-outline hover-up" style="margin-top:20px;">Let's Build Something Great &rarr;</a>
+      </div>
+
+      <div class="stats-cards">
+        <div class="stat-card crystal-glass tilt-hover">
+          <div class="stat-icon purple-bg">&lt;/&gt;</div>
+          <div class="stat-info">
+            <h3>3D & Full-Stack</h3>
+            <p>Expertise</p>
+          </div>
+        </div>
+
+        <div class="stat-card crystal-glass tilt-hover">
+          <div class="stat-icon purple-bg">⚡</div>
+          <div class="stat-info">
+            <h3>High Speed</h3>
+            <p>Performance</p>
+          </div>
+        </div>
+
+        <div class="stat-card crystal-glass tilt-hover">
+          <div class="stat-icon purple-bg">🗄️</div>
+          <div class="stat-info">
+            <h3>Mongo & Firebase</h3>
+            <p>Powerful Databases</p>
+          </div>
+        </div>
+
+        <div class="stat-card crystal-glass tilt-hover">
+          <div class="stat-icon purple-bg">⭐</div>
+          <div class="stat-info">
+            <h3 id="displaySatisfaction">100%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack & Skills -->
+  <section class="skills-section reveal-on-scroll" id="skills">
+    <div class="section-header text-center">
+      <span class="section-badge">MY TECH STACK</span>
+      <h2>Mastered Technologies & Frameworks</h2>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>HTML5 / CSS3 / JavaScript (ES6+)</span><span>95%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+      </div>
+
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>React.js & Front-End Architecture</span><span>90%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+      </div>
+
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>Node.js Backend Development</span><span>85%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+      </div>
+
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>MongoDB & Firebase Realtime Database</span><span>90%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+      </div>
+
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>3D Web Integration & Interactive UI</span><span>85%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+      </div>
+
+      <div class="skill-row crystal-glass">
+        <div class="skill-meta"><span>Responsive Design & Modern Workflows</span><span>95%</span></div>
+        <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="projects-section reveal-on-scroll" id="projects">
+    <div class="section-header text-center">
+      <span class="section-badge">PORTFOLIO SHOWCASE</span>
+      <h2>Professional Client Projects</h2>
+    </div>
+
+<div class="projects-grid">
+      <div class="project-card crystal-glass tilt-hover">
+        <div class="project-preview">
+          <span class="p-num">01</span>
+          <img src="img/1.png" alt="E-Commerce Platform">
+        </div>
+        <div class="project-info">
+          <h3>Porsche 911 3D Experience</h3>
+          <p>Immersive 3D web experience where the car dynamically moves and reacts with scroll interactions.</p>
+        </div>
+      </div>
+
+      <div class="project-card crystal-glass tilt-hover">
+        <div class="project-preview p-2">
+            <span class="p-num">02</span>
+         <img src="img/2.png" alt="E-Commerce Platform">
+        </div>
+        <div class="project-info">
+          <h3>Real-time Ordering App</h3>
+          <p>QR code restaurant ordering system connected directly with a live Kitchen Dashboard.</p>
+        </div>
+      </div>
+
+      <div class="project-card crystal-glass tilt-hover">
+        <div class="project-preview p-3"><span class="p-num">03</span>
+         <img src="img/3.png" alt="E-Commerce Platform">
+        </div>
+        <div class="project-info">
+          <h3>Educational LMS Platform</h3>
+          <p>Custom teacher platform for managing lectures, exams, student accounts, and backend data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer reveal-on-scroll" id="contact">
+    <div class="footer-cta">
+      <span class="section-badge">LET'S WORK TOGETHER</span>
+      <h2>Ready to start your next big project?</h2>
+      <p>I build custom, fast, and 3D interactive web applications tailored to your exact business needs.</p>
+      <a href="contact.html" class="btn btn-purple pulse-btn" style="margin-top:20px;">Get In Touch &nearr;</a>
+    </div>
+
+    <div class="footer-copyright">
+      <p>&copy; 2026 Youssef Mahmoud Fahmi. Designed & Built with Precision.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

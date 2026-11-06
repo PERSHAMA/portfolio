@@ -3,14 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youssef Mahmoud Fahmi - 3D Web Developer</title>
+  <title>PERSHAMA - 3D Web & Front-End Developer</title>
+  
+  <!-- Open Graph / Social Media Preview Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PERSHAMA - 3D Web & Front-End Developer">
+  <meta property="og:description" content="Explore professional 3D web experiences, real-time apps, and modern front-end solutions by Youssef Mahmoud.">
+  <meta property="og:image" content="img/IMG-20251122-WA0064.jpg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Back to Top Button Inline Style Enhancement */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 45px;
+      height: 45px;
+      background: var(--purple);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: #6d28d9;
+      transform: translateY(-4px);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Intro Splash Screen -->
+  <div id="intro-screen" class="intro-overlay">
+    <div class="intro-content">
+      <p class="intro-sub">&lt; Welcome to My Portfolio /&gt;</p>
+      <h1 class="intro-name">Youssef Mahmoud</h1>
+    </div>
+  </div>
 
   <!-- Background Animated Neon Blobs (Cosmic Vibe) -->
   <div class="blob-bg blob-1"></div>
@@ -18,9 +67,6 @@
 
   <!-- Scroll Progress Indicator -->
   <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-
-
-
 
   <!-- Header / Navbar -->
   <header class="navbar">
@@ -43,12 +89,17 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <div class="badge glow-badge" id="displayRole">3D WEB & FULL-STACK DEVELOPER</div>
+      <div class="badge glow-badge" id="displayRole">3D WEB & FRONT-END DEVELOPER</div>
       
-      <h1 class="hero-headline">
-        Hi, I'm <span id="displayName" class="purple-gradient-text">Youssef Mahmoud Fahmi</span><br>
-        <span id="displayTitle" class="typing-text">Crafting immersive 3D & modern web experiences.</span>
-      </h1>
+      <!-- Smooth Intro Section -->
+      <div class="hero-intro">
+        <span class="intro-greeting">Hi, I'm</span>
+        <h1 class="hero-headline">
+          <span id="displayName" class="purple-gradient-text">Youssef Mahmoud</span>
+          <span class="typing-cursor">|</span>
+        </h1>
+        <p class="hero-role">&lt; Crafting Immersive 3D & Modern Web Experiences /&gt;</p>
+      </div>
 
       <p class="hero-description" id="displayBio">
         Expert Front-End Developer specializing in building fast, interactive, and 3D-integrated web platforms using HTML, CSS, JS, React, Node, MongoDB, and Firebase.
@@ -56,7 +107,7 @@
 
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-purple glow-effect">Explore Work &nearr;</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch &darr;</a>
+        <a href="contact.html" class="btn btn-outline">Get In Touch &darr;</a>
       </div>
 
       <!-- Tech Stack Badge Strip -->
@@ -196,11 +247,11 @@
       <h2>Professional Client Projects</h2>
     </div>
 
-<div class="projects-grid">
+    <div class="projects-grid">
       <div class="project-card crystal-glass tilt-hover">
         <div class="project-preview">
           <span class="p-num">01</span>
-          <img src="img/1.png" alt="E-Commerce Platform">
+          <img src="img/1.png" alt="Porsche 911 3D Experience">
         </div>
         <div class="project-info">
           <h3>Porsche 911 3D Experience</h3>
@@ -210,8 +261,8 @@
 
       <div class="project-card crystal-glass tilt-hover">
         <div class="project-preview p-2">
-            <span class="p-num">02</span>
-         <img src="img/2.png" alt="E-Commerce Platform">
+          <span class="p-num">02</span>
+          <img src="img/2.png" alt="Real-time Ordering App">
         </div>
         <div class="project-info">
           <h3>Real-time Ordering App</h3>
@@ -220,8 +271,9 @@
       </div>
 
       <div class="project-card crystal-glass tilt-hover">
-        <div class="project-preview p-3"><span class="p-num">03</span>
-         <img src="img/3.png" alt="E-Commerce Platform">
+        <div class="project-preview p-3">
+          <span class="p-num">03</span>
+          <img src="img/3.png" alt="Educational LMS Platform">
         </div>
         <div class="project-info">
           <h3>Educational LMS Platform</h3>
@@ -245,6 +297,20 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" id="backToTopBtn">&uarr;</a>
+
   <script src="script.js"></script>
+  <script>
+    // Back to Top Button Script Logic
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 </html>

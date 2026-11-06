@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational LMS Platform - Case Study | PERSHAMA</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .case-study-section {
+      padding: 60px 8%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .case-header {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .case-header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .case-meta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .case-meta span {
+      background: rgba(124, 58, 237, 0.15);
+      color: var(--purple-light);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    /* نظام العرض السينمائي الرأسي (صور كبيرة منفصلة عن النصوص) */
+    .showcase-container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .showcase-item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* إطار الصورة الكبيرة */
+    .showcase-img-box {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #070a12;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .showcase-img-box:hover {
+      transform: scale(1.01);
+      border-color: rgba(192, 132, 252, 0.4);
+    }
+
+    .showcase-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* قسم العنوان والوصف غير الملتصق بالصورة */
+    .showcase-content-box {
+      padding: 0 10px;
+    }
+
+    .showcase-content-box h3 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .showcase-content-box h3 span {
+      color: var(--purple-light);
+      font-family: var(--font-mono);
+      font-size: 18px;
+    }
+
+    .showcase-content-box p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      .case-study-section {
+        padding: 40px 5%;
+      }
+      .case-header h1 {
+        font-size: 32px;
+      }
+      .showcase-content-box h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Neon Blobs -->
+  <div class="blob-bg blob-1"></div>
+  <div class="blob-bg blob-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span>Youssef Mahmoud</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Tech Stack</a>
+      <a href="index.html#projects">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="index.html#projects" class="btn btn-outline">&larr; Back to Portfolio</a>
+  </header>
+
+  <!-- Main Case Study Content -->
+  <section class="case-study-section">
+    <div class="case-header">
+      <span class="section-badge">CASE STUDY</span>
+      <h1 id="projectTitle">ChemPro Academy LMS & Web Viewer</h1>
+      <p style="color: var(--text-muted); font-size: 15px; max-width: 800px; margin: 15px auto 0 auto; line-height: 1.7;">
+        A high-performance educational platform designed for online learning. Featuring custom video player controls, dynamic course management, security watermarking, and interactive student evaluation tools.
+      </p>
+      
+      <div class="case-meta">
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>Database : mongodb</span>
+      </div>
+    </div>
+
+    <!-- نظام العرض الرأسي الكبير (مخصص لمنصة المدرس / LMS) -->
+    <div class="showcase-container">
+      
+      <!-- عنصر 1 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/3.png" alt="Student Dashboard & Landing">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>01</span> Student Landing & Dashboard Overview</h3>
+          <p>Designed a clean, engaging student dashboard providing quick access to active courses, lecture progress tracking, and upcoming assignments with zero visual clutter.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 2 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S1.png" alt="Custom Video Player">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>02</span> Course Catalog & Lecture Exploration</h3>
+          <p>The main student discovery hub: a clean, organized layout showcasing available lectures and categorized topics. Designed for intuitive navigation, students can effortlessly browse through subjects, check lecture durations, and launch learning sessions instantly.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 3 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S2.png" alt="Interactive Quiz Module">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>03</span> Secure Video Lecture & Student Watermarking System</h3>
+          <p>The core lecture view page, engineered with advanced security features including dynamic student identification watermarking embedded directly on the video player to prevent screen recording and content piracy. It also integrates comprehensive lecture descriptions, downloadable study materials, and direct access to associated quizzes.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S3.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>04</span> Interactive Quiz & Automated Evaluation System</h3>
+          <p>The interactive student assessment module: displays real-time auto-grading and answer evaluation for lecture quizzes. Students instantly receive their final score, visual markers for correct and incorrect answers, and a detailed breakdown to reinforce learning and track comprehension.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S4.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>05</span> Student Account Settings & Profile Management</h3>
+          <p>The student account configuration hub: allows students to view and update their personal information, academic year details, and contact numbers, alongside a secure password modification module to ensure complete control over their account security.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S5.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>06</span> Secure Authentication & Sign In Portal</h3>
+          <p>The secure entry point for the platform: a clean and responsive authentication gateway enabling students to sign in seamlessly with their credentials, ensuring protected and authorized access to their educational dashboard.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S6.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>07</span> Student Registration & Account Creation Gateway</h3>
+          <p>The student onboarding registration portal: designed to collect comprehensive user details required for account activation and security. As shown in the form, students provide their Full Name, Email Address, secure Password (with confirmation), Personal Phone Number, Parent Phone Number for emergency tracking, Date of Birth, and their specific Academic Year before hitting Create Account.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S7.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>08</span> Admin Portal & Category Management Hub</h3>
+          <p>The first restricted gateway in the teacher's admin portal: an intuitive category management dashboard that allows educators to create, organize, and manage course topics and curriculum sections dynamically, ensuring structured content delivery for students.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S8.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>09</span> Lectures & Content Management Hub</h3>
+          <p>The comprehensive content creation and publishing dashboard for educators: allows teachers to input lecture titles, assign categories and academic years, set durations, upload video files (MP4/WebM) and accompanying PDF workbooks, write detailed lesson notes, and build interactive quizzes with custom timers before publishing them instantly to the platform.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S9.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>10</span> Student & User Management Dashboard</h3>
+          <p>The centralized user control center for administrators: provides a complete overview of all registered accounts with advanced search and filtering options by academic year. Administrators can seamlessly manage user roles (such as assigning or revoking admin privileges), block unauthorized accounts to restrict access, and monitor student statuses to maintain complete platform security.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/S10.png" alt="Teacher Admin Dashboard">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>11</span> Quiz Results & Student Performance Tracker</h3>
+          <p>The comprehensive examination analytics dashboard for educators: allows teachers to track student exam submissions in real-time, search by student name or lecture title, view individual MCQ scores and percentage grades, check exact submission timestamps, and inspect detailed answers to monitor student comprehension effectively.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <p>&copy; 2026 Youssef Mahmoud Fahmi. Designed & Built with Precision.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

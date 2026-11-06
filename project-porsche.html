@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Case Study - PERSHAMA</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .case-study-section {
+      padding: 60px 8%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .case-header {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .case-header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .case-meta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .case-meta span {
+      background: rgba(124, 58, 237, 0.15);
+      color: var(--purple-light);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    /* نظام العرض السينمائي الرأسي (صور كبيرة منفصلة عن النصوص) */
+    .showcase-container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px; /* مسافة كبيرة وفواصل مريحة بين كل صورة والثانية */
+    }
+
+    .showcase-item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* إطار الصورة الكبيرة */
+    .showcase-img-box {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #070a12;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .showcase-img-box:hover {
+      transform: scale(1.01);
+      border-color: rgba(192, 132, 252, 0.4);
+    }
+
+    .showcase-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* قسم العنوان والوصف غير الملتصق بالصورة */
+    .showcase-content-box {
+      padding: 0 10px;
+    }
+
+    .showcase-content-box h3 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .showcase-content-box h3 span {
+      color: var(--purple-light);
+      font-family: var(--font-mono);
+      font-size: 18px;
+    }
+
+    .showcase-content-box p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      .case-study-section {
+        padding: 40px 5%;
+      }
+      .case-header h1 {
+        font-size: 32px;
+      }
+      .showcase-content-box h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Neon Blobs -->
+  <div class="blob-bg blob-1"></div>
+  <div class="blob-bg blob-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span>Youssef Mahmoud</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Tech Stack</a>
+      <a href="index.html#projects">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="index.html#projects" class="btn btn-outline">&larr; Back to Portfolio</a>
+  </header>
+
+  <!-- Main Case Study Content -->
+  <section class="case-study-section">
+    <div class="case-header">
+      <span class="section-badge">CASE STUDY</span>
+      <h1 id="projectTitle">Porsche 911 3D Experience</h1>
+      <p style="color: var(--text-muted); font-size: 15px; max-width: 700px; margin: 0 auto;">In-depth visual walkthrough of features, user interface modules, and architectural design steps.</p>
+      
+      <div class="case-meta">
+        <span>Client Project</span>
+        <span>React & Three.js</span>
+        <span>Full Documentation</span>
+      </div>
+    </div>
+
+    <!-- نظام العرض الرأسي الكبير (تقدر تضيف هنا حتى 10 صور أو أكثر براحتك) -->
+    <div class="showcase-container">
+      
+      <!-- عنصر 1 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/p2.png" alt="Screenshot 1">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>01</span> Preloader & Startup Experience</h3>
+          <p>To gracefully handle heavy 3D assets and high-end automotive renders, a sleek custom loading screen was engineered at startup. This preloader ensures complete asset synchronization before initialization, guaranteeing a butter-smooth entry into the 3D environment.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 2 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/1.png" alt="Screenshot 2">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>02</span> Dynamic 3D Car Motion & Scroll Integration</h3>
+<p>Here lies the core challenge of the project: engineering the 3D car to dynamically move, rotate, and react seamlessly to user scroll interactions. Countless hours of performance testing, coordinate tuning, and frame-rate optimization were poured into this module to achieve that buttery-smooth, cinematic professional feel.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 3 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/p3.png" alt="Screenshot 3">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>03</span> Hero Landing & Cinematic Car Entrance</h3>
+          <p>This is the main landing interface and the very first visual impression upon entering the site. Special focus and precise engineering went into orchestrating the smooth cinematic entrance of the car, locking it perfectly into the center stage to instantly capture the user's attention and set a high-end tone.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 4 (تقدر تنسخ البلوكاية دي وتزود منها زي ما انت عايز لحد 10 صور أو أكتر) -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/p4.png" alt="Screenshot 4">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>04</span> Horizontal Car Rotation & Realistic Shadow Integration</h3>
+          <p>In this section, the focus shifted to engineering the car to rotate horizontally in sync with the user's scroll motion. Special attention and meticulous fine-tuning were dedicated to the lighting and shadow effects underneath the vehicle, ensuring absolute realism and a striking 3D depth perception.</p>
+        </div>
+      </div>
+
+
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/p5.png" alt="Screenshot 4">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>05</span> Reverse Rotation & Dynamic Lighting Reflections</h3>
+          <p>In this phase, the car smoothly rotates in the opposite direction synchronized with the scroll, while dynamic technical specifications and data points appear at precisely timed intervals. Special focus was directed toward perfecting lighting dynamics and realistic reflections bouncing off the vehicle's body to achieve an elite visual finish.</p>
+        </div>
+      </div>
+
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/p6.png" alt="Screenshot 4">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>06</span> Grand Finale & Front-Facing Showcase</h3>
+          <p>As the grand finale of the digital experience, the focus shifted to positioning the front profile of the car directly facing forward. Meticulous attention was poured into amplifying surface details, sharp lighting reflections, and material clarity, delivering a powerful, high-impact visual conclusion that leaves a lasting impression.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <p>&copy; 2026 Youssef Mahmoud Fahmi. Designed & Built with Precision.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

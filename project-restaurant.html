@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time Restaurant App - Case Study | PERSHAMA</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .case-study-section {
+      padding: 60px 8%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .case-header {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .case-header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .case-meta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .case-meta span {
+      background: rgba(124, 58, 237, 0.15);
+      color: var(--purple-light);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    /* نظام العرض السينمائي الرأسي (صور كبيرة منفصلة عن النصوص) */
+    .showcase-container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .showcase-item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* إطار الصورة الكبيرة */
+    .showcase-img-box {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #070a12;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .showcase-img-box:hover {
+      transform: scale(1.01);
+      border-color: rgba(192, 132, 252, 0.4);
+    }
+
+    .showcase-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* قسم العنوان والوصف غير الملتصق بالصورة */
+    .showcase-content-box {
+      padding: 0 10px;
+    }
+
+    .showcase-content-box h3 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .showcase-content-box h3 span {
+      color: var(--purple-light);
+      font-family: var(--font-mono);
+      font-size: 18px;
+    }
+
+    .showcase-content-box p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      .case-study-section {
+        padding: 40px 5%;
+      }
+      .case-header h1 {
+        font-size: 32px;
+      }
+      .showcase-content-box h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Neon Blobs -->
+  <div class="blob-bg blob-1"></div>
+  <div class="blob-bg blob-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span>
+      <span>Youssef Mahmoud</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Tech Stack</a>
+      <a href="index.html#projects">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="index.html#projects" class="btn btn-outline">&larr; Back to Portfolio</a>
+  </header>
+
+  <!-- Main Case Study Content -->
+  <section class="case-study-section">
+    <div class="case-header">
+      <span class="section-badge">CASE STUDY</span>
+      <h1 id="projectTitle">Real-time QR Restaurant & Kitchen System</h1>
+      <p style="color: var(--text-muted); font-size: 15px; max-width: 800px; margin: 15px auto 0 auto; line-height: 1.7;">
+        An end-to-end real-time ordering ecosystem enabling customers to scan table QR codes, browse menus, place orders instantly, and sync data seamlessly with a live Kitchen Dashboard using React and Firebase.
+      </p>
+      
+      <div class="case-meta">
+        <span>Client Project</span>
+        <span>React & Firebase</span>
+        <span>Live Sync & Dashboard</span>
+      </div>
+    </div>
+
+    <!-- نظام العرض الرأسي الكبير (مخصص لتطبيق المطاعم) -->
+    <div class="showcase-container">
+      
+      <!-- عنصر 1 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r1.png" alt="QR Menu Interface">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>01</span> Luxurious Menu Intro & Brand Experience</h3>
+          <p>Crafting a striking and upscale entrance for the digital menu. This initial visual introduction sets an immediate tone of fine dining and luxury, greeting customers with high-end aesthetics and a cinematic vibe right after scanning the table's QR code.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 2 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/2.png" alt="Cart & Checkout Process">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>02</span> Direct Product Showcase & Frictionless Menu UX</h3>
+          <p>Immediately following the cinematic intro, the menu transitions directly into displaying products cleanly and instantly. This streamlined approach avoids any unnecessary friction or complexity, allowing customers to browse items, check prices, and place orders effortlessly from the very first glance.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 3 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r2.png" alt="Kitchen Dashboard View">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>03</span> Multi-Category Navigation & Organized Menu</h3>
+          <p>To accommodate the restaurant's diverse menu offerings, an intuitive top category navigation bar was engineered. This allows customers to easily filter and switch between various food sections instantly, ensuring a smooth, clutter-free browsing experience.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 4 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r3.png" alt="Order Status Tracking">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>04</span> Instant Search Bar & Quick Item Discovery</h3>
+          <p>To enhance user experience and eliminate any browsing friction, an advanced real-time search bar was integrated. This allows customers to instantly search for specific dishes, ingredients, or favorites on the fly, ensuring a fast and frictionless ordering journey.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 5 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r4.png" alt="Admin & Analytics Panel">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>05</span> Item Customization & Size Selection Modal</h3>
+          <p>After selecting a meal, an interactive modal pops up allowing customers to customize their order by choosing preferred sizes (e.g., Single, Double, Triple) with dynamically updated pricing for each option. This ensures clear visibility, flexible choices, and a seamless add-to-cart experience.</p>
+        </div>
+      </div>
+
+      <!-- عنصر 6 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r5.png" alt="Mobile Responsiveness">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>06</span> Checkout & Table Verification Flow</h3>
+          <p>At the final checkout step, customers enter their name and table number to ensure accurate order delivery once ready, along with an optional phone number field for communication. This streamlined form wraps up the ordering process swiftly and securely.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 7 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/r6.png" alt="Mobile Responsiveness">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>07</span> Order Success Confirmation & Kitchen Dispatch</h3>
+          <p>The final confirmation step in the user journey: once the order is placed, a sleek success banner notifies the customer that their meal has been successfully dispatched straight to the kitchen in real-time, leaving them relaxed and ready for service.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 8 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/R7.png" alt="Mobile Responsiveness">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>08</span> Live Kitchen Stream & Order Management (KDS)</h3>
+          <p> The central command hub for kitchen staff: incoming orders stream in real-time displaying table numbers, item details, and preparation statuses (Pending, Preparing, Done). This robust live tracking system eliminates paper tickets and optimizes kitchen workflow efficiency.</p>
+        </div>
+      </div>
+
+            <!-- عنصر 9 -->
+      <div class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="img/R8.png" alt="Mobile Responsiveness">
+        </div>
+        <div class="showcase-content-box">
+          <h3><span>09</span> Live Revenue Tracking & Daily Analytics</h3>
+          <p>Once orders are marked as completed, the dashboard instantly updates daily revenues, total completed orders, average order value, and top-selling items. This provides restaurant owners with real-time financial metrics and operational insights right from the kitchen stream.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-copyright">
+      <p>&copy; 2026 Youssef Mahmoud Fahmi. Designed & Built with Precision.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

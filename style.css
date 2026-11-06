@@ -396,6 +396,190 @@ body {
   margin-top: auto;
 }
 
+/* --- PERSHAMA Smooth Intro Animation --- */
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.intro-greeting {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--purple-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInSmooth 0.8s ease forwards 0.2s;
+}
+
+.hero-brand-name {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+/* النص المتدرج مع أنيميشن الظهور الناعم */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #c084fc 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.45));
+  opacity: 0;
+  transform: translateY(15px);
+  animation: heroTextReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+/* المؤشر ينبض بشكل ناعم */
+.typing-cursor {
+  color: var(--purple-light);
+  font-weight: 300;
+  margin-left: 4px;
+  animation: blinkCursor 0.9s infinite ease-in-out;
+}
+
+.hero-role {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 18px;
+  margin-top: 6px;
+  opacity: 0;
+  animation: fadeInSmooth 0.8s ease forwards 0.8s;
+}
+
+/* --- Intro Splash Screen Styles --- */
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #050811;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro-content {
+  text-align: center;
+  animation: introPop 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.intro-name {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #c084fc 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+/* إيقاف وتأجير انيميشن الـ Hero أثناء تفعيل الانترو */
+body.intro-active .hero-intro .intro-greeting,
+body.intro-active .hero-intro .purple-gradient-text,
+body.intro-active .hero-intro .hero-role {
+  animation-play-state: paused !important;
+  opacity: 0 !important;
+}
+
+/* إعادة تشغيل انيميشن الـ Hero بمجرد انتهاء الانترو */
+body:not(.intro-active) .hero-intro .intro-greeting {
+  animation: fadeInSmooth 0.8s ease forwards 0.1s;
+}
+
+body:not(.intro-active) .hero-intro .purple-gradient-text {
+  animation: heroTextReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+}
+
+body:not(.intro-active) .hero-intro .hero-role {
+  animation: fadeInSmooth 0.8s ease forwards 0.7s;
+}
+
+/* --- Smooth Scrolling for Anchor Links --- */
+html {
+  scroll-behavior: smooth;
+}
+
+.intro-sub {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+@keyframes introPop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Keyframes لأنيميشن سلس للغاية */
+@keyframes heroTextReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(10px) drop-shadow(0 0 0px rgba(139, 92, 246, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px) drop-shadow(0 0 25px rgba(139, 92, 246, 0.45));
+  }
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* التجاوب للموبايل */
+@media (max-width: 768px) {
+  .hero-intro {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-brand-name {
+    font-size: 38px;
+  }
+  .hero-role {
+    font-size: 15px;
+  }
+}
+
 /* Footer */
 .footer { padding: 90px 8% 40px; text-align: center; }
 .footer-cta h2 { font-size: 38px; margin-bottom: 12px; }

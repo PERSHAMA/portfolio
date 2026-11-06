@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Intro Splash Screen Logic & Hero Sync ---
+  const introScreen = document.getElementById('intro-screen');
+  
+  // 1. إضافة كلاس في البداية عشان نوقف أنيميشن الـ Hero
+  document.body.classList.add('intro-active');
+
+  // 2. التحكم في وقت إخفاء الإنترو (بعد ثانيتين هنا)
+  setTimeout(() => {
+    if (introScreen) {
+      introScreen.classList.add('fade-out');
+    }
+    // 3. إزالة الكلاس عشان يبدأ أنيميشن الـ Hero يشتغل بسلاسة قدام الزائر
+    document.body.classList.remove('intro-active');
+  }, 2000); // 2000 تعني ثانيتين
+
   // --- Scroll Progress Bar ---
   const scrollProgressBar = document.getElementById('scrollProgressBar');
-  window.addEventListener('scroll', () => {
-    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
-    scrollProgressBar.style.width = progress + '%';
-  });
+  if (scrollProgressBar) {
+    window.addEventListener('scroll', () => {
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      scrollProgressBar.style.width = progress + '%';
+    });
+  }
 
   // --- Scroll Reveal Animations ---
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
@@ -60,26 +77,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayBio = document.getElementById('displayBio');
   const displaySatisfaction = document.getElementById('displaySatisfaction');
 
-  openPanelBtn.addEventListener('click', () => controlDrawer.classList.add('open'));
-  closePanelBtn.addEventListener('click', () => controlDrawer.classList.remove('open'));
+  if (openPanelBtn && controlDrawer) {
+    openPanelBtn.addEventListener('click', () => controlDrawer.classList.add('open'));
+  }
+  if (closePanelBtn && controlDrawer) {
+    closePanelBtn.addEventListener('click', () => controlDrawer.classList.remove('open'));
+  }
 
   // Upload Custom Photo
-  uploadBtn.addEventListener('click', () => imageInput.click());
-  imageInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => { profileImg.src = event.target.result; };
-      reader.readAsDataURL(file);
-    }
-  });
+  if (uploadBtn && imageInput) {
+    uploadBtn.addEventListener('click', () => imageInput.click());
+    imageInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => { if (profileImg) profileImg.src = event.target.result; };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
 
   // Dynamic Live Binding
-  inputLogo.addEventListener('input', (e) => displayLogo.textContent = e.target.value || 'CodeCraft');
-  inputRole.addEventListener('input', (e) => displayRole.textContent = e.target.value || '');
-  inputName.addEventListener('input', (e) => displayName.textContent = e.target.value || '');
-  inputTitle.addEventListener('input', (e) => displayTitle.textContent = e.target.value || '');
-  inputBio.addEventListener('input', (e) => displayBio.textContent = e.target.value || '');
-  inputSatisfaction.addEventListener('input', (e) => displaySatisfaction.textContent = e.target.value || '100%');
+  if (inputLogo && displayLogo) inputLogo.addEventListener('input', (e) => displayLogo.textContent = e.target.value || 'PERSHAMA');
+  if (inputRole && displayRole) inputRole.addEventListener('input', (e) => displayRole.textContent = e.target.value || '');
+  if (inputName && displayName) inputName.addEventListener('input', (e) => displayName.textContent = e.target.value || '');
+  if (inputTitle && displayTitle) inputTitle.addEventListener('input', (e) => displayTitle.textContent = e.target.value || '');
+  if (inputBio && displayBio) inputBio.addEventListener('input', (e) => displayBio.textContent = e.target.value || '');
+  if (inputSatisfaction && displaySatisfaction) inputSatisfaction.addEventListener('input', (e) => displaySatisfaction.textContent = e.target.value || '100%');
 
 });
